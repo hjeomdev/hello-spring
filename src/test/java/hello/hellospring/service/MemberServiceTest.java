@@ -9,6 +9,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Commit;
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -21,6 +22,7 @@ class MemberServiceTest {
     @Autowired MemberRepository memberRepository;
 
     @Test
+    // @Commit // 결과를 커밋해서 디비에 반영하게 해주는 어노테이션
     void 회원가입() {
         // given
         Member member = new Member();
